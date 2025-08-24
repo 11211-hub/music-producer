@@ -1,0 +1,232 @@
+/* ===============================
+   General Reset & Base
+================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #111;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a395e0;
+}
+
+/* ===============================
+   Header / Sidebar
+================================*/
+.header {
+  width: 260px;
+  background: #1a1a1a;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header .profile-img {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.header .profile-img img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 4px solid #a395e0;
+}
+
+.header .sitename {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.header .sitename img.logo-inline {
+  height: 30px;
+  margin-right: 8px;
+}
+
+.header .social-links {
+  margin: 15px 0;
+}
+
+.header .social-links a {
+  font-size: 20px;
+  display: inline-block;
+  margin: 0 6px;
+  color: #bbb;
+}
+
+.header .social-links a:hover {
+  color: #a395e0;
+}
+
+/* ===============================
+   Nav Menu
+================================*/
+.navmenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navmenu li {
+  margin: 15px 0;
+}
+
+.navmenu a {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #bbb;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navmenu a .navicon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.navmenu a:hover,
+.navmenu a.active {
+  background: #a395e0;
+  color: #111;
+  font-weight: 600;
+}
+
+/* ===============================
+   Header Toggle (Mobile)
+================================*/
+.header-toggle {
+  font-size: 28px;
+  position: absolute;
+  top: 20px;
+  right: -50px;
+  background: #a395e0;
+  color: #111;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: none;
+}
+
+/* ===============================
+   Services Section
+================================*/
+.section {
+  padding: 80px 20px;
+  margin-left: 260px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #a395e0;
+}
+
+.section-title p {
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* Service Item */
+.service-item {
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+  background: #292929;
+}
+
+.service-item .icon {
+  font-size: 32px;
+  color: #a395e0;
+  margin-right: 15px;
+}
+
+.service-item .title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.service-item .title a {
+  color: #fff;
+}
+
+.service-item .description {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* ===============================
+   Responsive Design
+================================*/
+@media (max-width: 991px) {
+  .header {
+    transform: translateX(-100%);
+  }
+  .header.active {
+    transform: translateX(0);
+  }
+  .header-toggle {
+    display: block;
+  }
+  .section {
+    margin-left: 0;
+    padding: 60px 20px;
+  }
+}
+
+
+#music-library .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
