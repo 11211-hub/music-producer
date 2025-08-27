@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function() { 
   "use strict";
 
   /**
@@ -238,37 +238,7 @@
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".php-email-form");
-  const loading = document.querySelector(".loading");
-  const errorMessage = document.querySelector(".error-message");
-  const sentMessage = document.querySelector(".sent-message");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    // Reset states
-    loading.style.display = "block";
-    errorMessage.style.display = "none";
-    sentMessage.style.display = "none";
-
-    // Simulate sending...
-    setTimeout(() => {
-      loading.style.display = "none";
-
-      // Example: Random success/error simulation
-      const success = Math.random() > 0.2;
-
-      if (success) {
-        sentMessage.style.display = "block";
-        form.reset();
-      } else {
-        errorMessage.textContent = "Oops! Something went wrong. Try again.";
-        errorMessage.style.display = "block";
-      }
-    }, 2000);
-  });
-});
 
 
 

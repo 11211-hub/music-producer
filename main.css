@@ -1090,109 +1090,177 @@ section,
 
 
 
-
-
-
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
-.contact .info-wrap {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+/* Contact Section */
+.contact {
+  padding: 40px 20px;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  width: 100%; /* ✅ fixed: was 120% */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media (max-width: 575px) {
-  .contact .info-wrap {
-    padding: 20px;
-  }
+.contact .section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contact .section-title p {
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Info Box */
+.contact .info-wrap {
+  background: #1b2a38;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.4);
+  width: 100%; /* ✅ no more fixed margin */
+  margin-bottom: 30px;
 }
 
 .contact .info-item {
-  margin-bottom: 40px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
 }
 
 .contact .info-item i {
-  font-size: 20px;
-  color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
+  font-size: 24px;
+  color: #00c6ff;
   margin-right: 15px;
 }
 
 .contact .info-item h3 {
-  padding: 0;
   font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 5px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
 }
 
 .contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
+  margin: 0;
+  color: #bbb;
   font-size: 14px;
 }
 
-.contact .info-item:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+.contact iframe {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  height: 250px;
 }
 
-.contact .php-email-form {
-  background-color: var(--surface-color);
-  height: 100%;
+/* Form */
+.contact form {
+  background: #ffffff;
   padding: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
 }
 
-@media (max-width: 575px) {
-  .contact .php-email-form {
+.contact form:hover {
+  transform: translateY(-3px);
+}
+
+.contact form label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.contact form .form-control {
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 12px 15px;
+  background: #fafafa;
+  color: #111;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.contact form .form-control:focus {
+  background: #fff;
+  border-color: #00c6ff;
+  box-shadow: 0px 0px 6px rgba(0, 198, 255, 0.4);
+  outline: none;
+}
+
+.contact form textarea.form-control {
+  resize: none;
+  min-height: 120px;
+}
+
+.contact form button {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  padding: 12px 28px;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact form button:hover {
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  box-shadow: 0px 5px 20px rgba(0, 198, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .contact .row {
+    display: flex;
+    gap: 30px;
+  }
+
+  .contact .col-lg-5,
+  .contact .col-lg-7 {
+    flex: 1;
+  }
+
+  .contact iframe {
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding: 20px 15px;
+  }
+
+  .contact .section-title h2 {
+    font-size: 26px;
+  }
+
+  .contact .section-title p {
+    font-size: 14px;
+  }
+
+  .contact form {
     padding: 20px;
   }
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
-}
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
