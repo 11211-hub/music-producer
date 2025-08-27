@@ -350,8 +350,12 @@ align-items: center;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.4);
-  width: 120%;
+
+  width: calc(100% - 250px); /* 100% minus sidebar width */
+  margin-left: 250px;        /* pushes it to the right */
+  box-sizing: border-box;
 }
+
 
 .contact .info-item {
   margin-bottom: 20px;
@@ -383,8 +387,6 @@ align-items: center;
   border-radius: 12px;
   overflow: hidden;
 }
-
-/* Form Container */
 .contact .php-email-form {
   background: #ffffff;
   padding: 35px;
@@ -392,12 +394,12 @@ align-items: center;
   box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   box-sizing: border-box;
-  margin-left: auto;
-  margin-right: 0%;
-  max-width: 600px;
-  height: 100%; 
 
+  margin: 0 auto;          /* centers form horizontally */
+  max-width: 600px;        /* wider but still constrained */
+  width: 100%;             /* takes full width on mobile */
 }
+
 
 .contact .php-email-form:hover {
   transform: translateY(-3px);
