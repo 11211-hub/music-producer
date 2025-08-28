@@ -45,6 +45,13 @@ const swiper = new Swiper(".swiper-container", {
 });
 
 
+    window.addEventListener("load", function () {
+      let preloader = document.getElementById("preloader");
+      if (preloader) {
+        preloader.style.display = "none";
+      }
+    });
+  
 
 
 
